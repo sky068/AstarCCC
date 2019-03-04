@@ -123,6 +123,7 @@ let AStar = cc.Class({
         this.openList.push(startGrid);
         let curGrid = this.openList[0];
         while (this.openList.length > 0 && curGrid.type != 2){
+            // 每次都取出f值最小的节点进行查找
             curGrid = this.openList[0];
             if (curGrid.type == 2){
                 cc.log("find path success.");
