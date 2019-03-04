@@ -191,5 +191,3 @@ let AStar = cc.Class({
     }
     
 });
-
-module.exports = AStar;
