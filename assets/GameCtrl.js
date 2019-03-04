@@ -40,5 +40,13 @@ cc.Class({
     onBtnRestart(){
         this.node.getComponent("AStar").initMap();
     },
+
+    onCheck(toggle, v){
+        if (v == 8){
+            this.node.getComponent("AStar").is8dir = toggle.isChecked;
+        } else {
+            this.node.getComponent("AStar").is8dir = !toggle.isChecked;
+        }
+    }
     // update (dt) {},
 });
