@@ -166,8 +166,8 @@ let AStar = cc.Class({
                                 if (this.openList.indexOf(this.gridsList[col][row]) < 0){
                                     this.openList.push(this.gridsList[col][row]);
                                 }
-                                // 重新按照f值排序（升序排列)
-                                this.openList.sort(this._sortFunc);
+                                // // 重新按照f值排序（升序排列)
+                                // this.openList.sort(this._sortFunc);
                         }
                     }
                 }
@@ -179,6 +179,9 @@ let AStar = cc.Class({
             if (this.openList.length <= 0){
                 cc.log("find path failed.");
             }
+
+            // 重新按照f值排序（升序排列)
+            this.openList.sort(this._sortFunc);
         }
     },
 
