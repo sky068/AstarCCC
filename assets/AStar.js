@@ -16,7 +16,7 @@ let Grid = cc.Class({
         this.g = 0;
         this.h = 0;
         this.parent = null;
-        this.type = 0; // -1障碍物， 0正常， 1目标点， 2起点
+        this.type = 0; // -1障碍物， 0正常， 1起点， 2目的点
     }
     
 });
@@ -174,7 +174,7 @@ let AStar = cc.Class({
             }
             // 遍历完四周节点后把当前节点加入关闭列表
             this.closeList.push(curGrid);
-            // 从开发列表把当前节点移除
+            // 从开放列表把当前节点移除
             this.openList.splice(this.openList.indexOf(curGrid), 1);
             if (this.openList.length <= 0){
                 cc.log("find path failed.");
